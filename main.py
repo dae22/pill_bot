@@ -1,7 +1,7 @@
 import asyncio
 from aiogram import Bot, Dispatcher
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
-from config import *
+from decouple import config
 from database import create_table
 import pills, common
 
@@ -9,7 +9,7 @@ import pills, common
 async def main():
     await create_table()
 
-    bot = Bot(token=TOKEN)
+    bot = Bot(token=config("TELEGRAM_TOKEN"))
     dp = Dispatcher()
 
     dp.include_router(common.router)
