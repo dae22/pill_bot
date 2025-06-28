@@ -1,11 +1,11 @@
 import re
-from sqlalchemy import select, func
+from sqlalchemy import select
 from aiogram import Router, Bot, F, types
 from aiogram.types import Message
 from aiogram.fsm.context import FSMContext
 from aiogram.fsm.state import StatesGroup, State
 from datetime import datetime, time, timedelta
-from keyboard import *
+from keyboard import main_keyboard, delete_keyboard, confirm_keyboard
 from database import AsyncSessionLocal, PillOrm
 
 

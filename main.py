@@ -3,7 +3,8 @@ from aiogram import Bot, Dispatcher
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 from decouple import config
 from database import create_table
-import pills, common
+import pills
+import common
 
 
 async def main():
